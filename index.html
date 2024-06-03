@@ -1,0 +1,222 @@
+
+<html lang="en">
+  <!-- 
+  Code Made By Nais ID
+  Youtube: Nais ID
+  Tiktok: @hanizapunyaa
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>I Love You</title>
+    <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: "Indie Flower", cursive;
+      font-optical-sizing: auto;
+    }
+
+    body {
+      background: #eed9af;
+    }
+
+    .copyright {
+      text-decoration: none;
+      position: fixed;
+      bottom: 10px;
+      left: calc(50vw - 110px);
+      width: 220px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+      z-index: 99;
+      opacity: 0.4;
+    }
+
+    .bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5);
+    }
+
+    .content {
+      color: white;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 35px 40px;
+      border-radius: 20px;
+    }
+
+    .content img.surat {
+      margin: 25px auto;
+      animation: animasi1 1s ease infinite;
+      height: 90px;
+      cursor: pointer;
+    }
+
+    @keyframes animasi1 {
+      0% {
+        transform: scale(1.03);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.03);
+      }
+    }
+
+    @keyframes animasi2 {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(5px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .content2 {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.575);
+      display: none;
+    }
+
+    .content2 .wa {
+      text-align: center;
+      display: none;
+    }
+
+    .content2 .wa button {
+      background-image: linear-gradient(to top left, #ff009d, #ff004c);
+      padding: 7px 20px;
+      margin: 50px auto;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      border: 2px solid white;
+      animation: animasi2 1s ease infinite;
+    }
+
+    .paper {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      min-width: 360px;
+      height: 480px;
+      margin: 0 auto;
+      margin-top: 60px;
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .paper:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
+      background-size: 30px 30px;
+      border-right: 3px solid #d44147;
+      box-sizing: border-box;
+    }
+
+    .paper-content {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      bottom: 30px;
+      left: 40px;
+      background: linear-gradient(transparent, transparent 28px, #91d1d3 28px);
+      background-size: 30px 30px;
+    }
+
+    .paper-content textarea {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      line-height: 30px;
+      padding: 0 10px;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: rgb(0, 0, 0);
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+  </style>
+  </head>
+  <body>
+
+    <audio autoplay type="audio" loop="" class="audio"></audio>
+    <div class="bg"></div>
+
+    <div class="content animate__animated animate__bounceInDown">
+      <div class="card">
+        <div>
+          <h3>haloo mas aka, ada pesan nih buat mas aka!</h3>
+        </div>
+        <img onclick="tampil()" class="surat" src="I LOVE YOU.gif" alt="MAIL" />
+        <p>Tekan untuk membuka</p>
+      </div>
+    </div>
+    <div class="content2">
+      <div class="paper animate__animated animate__bounceIn" id="content2">
+        <div class="paper-content">
+          <textarea class="pesan" disabled></textarea>
+        </div>
+      </div>
+      <div class="wa animate__animated animate__fadeInUp">
+        <button onClick='bukaWa();'><i class='icon whatsapp'></i>tap sini.</a>
+      </div>
+    </div>
+    <script>
+      
+      var musik = "high school.mp3";
+      var background = "IMG_3690 (1).jpg"; 
+      var ucapanSurat = "hiii, thereee! (INI YANG AKU BILANG KEAPUS 😡). haloo sayanggg, aku cuma mau ngasihtauuuu ke kamu seberapa beruntung nya akuu punya kamu sebagai pacarrr sekaligus temen, sahabat, koko, adik dan segala nyaaa.\n\n thankyou so much yaa udah selalu nemenin aku stiap aku mau kemana mana, slalu menuhin kemauan kamu even kamu harus tersiksa sometimes 😭, selalu sabar sama aku, selalu maafin akuuu, selalu ngehibur akuuu. terimakasii kamu udah coba buat selesaiin masalah masalah kita dengan kepala dingin even aku pake kepala panas 😭😭😭. ibarat tu kamu masak telur tapi keasinan tapi kamu malah cari cara buat bikin telur nya ngga keasinan dibanding kamu harus bikin telur yang baru 🥺🫶🏻.\n\n thankyouuu so much for handling me so well! even aku udah ngeluarin kata kata yang bikin kamu hurtful, sedih, ngerasa jahat, ngerasa bad dsb tapi kamu selalu coba buat prioritasin perasaan aku duluan :( and i’m feel very grateful for it sayang. terimakasihh buat semua effort kamu ke akuu, buat semua mua nya yang udah kamu kasih ke akuuu. i appreciate it so much!\n\n you’ve been doing greet today and i’m so so so proud of you! terimakasiii kamu selalu mencoba yang terbaikkk, selalu brusaha buat berkembang jadi pribadi yang lebih baik buat diri kamu dan orang sekitar kamuuu, terimakasih udah mau dengerin dan nerima saran and kritik dengan lapanggg 🤍. \n\n last but not least, kamu juga harus jaga kesehatan kamu. atur pola makan yang teratur mulai dari breakfast-lunch-dinner jangan skip satu punnn. kurangin tidur malemmm biar mata nya ngga kecapeannn dan badan kamu always fit! kalau lagi ngerasa sedih atau upset bilangg ke aku yaaa? aku bakal selalu disiniii sama kamu kapan pun dan dimana pun kamu bituh akuuu. aku bakal selalu dengerin kamu, merhatiin kamu dan take a good care of you forever and always <3.\n\n intinya iloveyousomuch dearest honey 🩶";
+      var pesanWhatsapp = "Bisa aja kamu🤭"
+
+    </script>
+    <script>var audio = document.querySelector(".audio"); var bg = document.querySelector(".bg"); var isiSurat = document.querySelector(".pesan"); audio.src = musik; bg.style = "background-image: url('" + background + "')"; function tampil() { document.querySelector(".card").style = "transition: 0.5s all ease;transform: scale(0);opacity: 0;"; audio.play(); setTimeout(typeWriter, 1000); setTimeout(function () { document.querySelector(".content2").style.display = "block"; }, 400); } var i = 0; var speed = 50; isiSurat.value = ""; function typeWriter() { if (i < ucapanSurat.length) { isiSurat.value += ucapanSurat.charAt(i); i++; setTimeout(typeWriter, speed); } else { document.querySelector(".wa").style.display = "block"; } } var content = document.querySelector(".content"); var cpr = document.querySelector(".cpr").innerHTML; if (cpr != "@qngadis on twitter") { content.style.display = "none"; }
+      function bukaWa() {window.location = "https://t.me/simpfhoon"}</script>
+  </body>
+</html>
